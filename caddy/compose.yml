@@ -1,10 +1,10 @@
 services:
-  reverse-proxy:
+  app:
     image: ghcr.io/trly/caddy:2.11
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:z
-      - caddy-data:/data
-      - caddy-config:/config
+      - data:/data
+      - config:/config
     ports:
       - target: 80
         published: 80
@@ -16,8 +16,8 @@ services:
       acme-email: ACME_EMAIL
 
 volumes:
-  caddy-data:
-  caddy-config:
+  data:
+  config:
 
 secrets:
   porkbun-api-key:
