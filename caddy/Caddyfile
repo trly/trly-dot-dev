@@ -17,3 +17,8 @@ trly.dev {
 	import porkbun_tls
 }
 
+drop.trly.dev {
+	reverse_proxy pairdrop-app:3000
+	import porkbun_tls
+}
+

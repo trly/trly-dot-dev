@@ -1,0 +1,15 @@
+services:
+  app:
+    image: quay.io/linuxserver.io/pairdrop:1.11.2
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - RATE_LIMIT=false
+      - WS_FALLBACK=false
+    networks:
+      - caddy_default
+
+networks:
+  caddy_default:
+    external: true
