@@ -17,8 +17,9 @@ services:
 
 networks:
   default:
-    driver_opts:
-      dns: "8.8.8.8"
+    x-quad-ops-network-args:
+      - "--dns=94.237.127.9"
+      - "--dns=94.237.40.9"
 
 volumes:
   data:
