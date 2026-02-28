@@ -18,7 +18,7 @@ trly.dev {
 }
 
 id.trly.dev {
-	reverse_proxy pocket-id-app:3000
+	reverse_proxy pocket-id-app:1411
 	import porkbun_tls
 }
 
