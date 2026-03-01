@@ -27,8 +27,3 @@ drop.trly.dev {
 	import porkbun_tls
 }
 
-status.trly.dev {
-	reverse_proxy kener-app:3000
-	import porkbun_tls
-}
-
