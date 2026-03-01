@@ -20,7 +20,7 @@ services:
       kener-secret-key: KENER_SECRET_KEY
 
   redis:
-    image: redis:7-alpine
+    image: docker.io/library/redis:7-alpine
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis-data:/data
