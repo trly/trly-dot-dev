@@ -6,7 +6,7 @@ services:
       TRUST_PROXY: ${TRUST_PROXY}
       RELYING_PARTY_ID: ${RELYING_PARTY_ID}
       RELYING_PARTY_ORIGIN: ${RELYING_PARTY_ORIGIN}
-    x-podman-env-secrets:
+    x-quad-ops-env-secrets:
       pocket-id-encryption-key: ENCRYPTION_KEY
     networks:
       - caddy_default
@@ -25,8 +25,4 @@ networks:
 
 volumes:
   pocket-id-data:
-
-secrets:
-  pocket-id-encrpytion-key:
-    external: true
 
