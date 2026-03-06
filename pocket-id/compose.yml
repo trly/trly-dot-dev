@@ -9,9 +9,9 @@ services:
     x-quad-ops-env-secrets:
       pocket-id-encryption-key: ENCRYPTION_KEY
     networks:
-      - caddy_default
+      - caddy-default
     volumes:
-      - "pocket-id-data:/app/data"
+      - "data:/app/data"
     healthcheck:
       test: [ "CMD", "/app/pocket-id", "healthcheck" ]
       interval: 1m30s
@@ -20,9 +20,9 @@ services:
       start_period: 10s
 
 networks:
-  caddy_default:
+  caddy-default:
     external: true
 
 volumes:
-  pocket-id-data:
+  data:
 

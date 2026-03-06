@@ -8,8 +8,8 @@ services:
       - RATE_LIMIT=false
       - WS_FALLBACK=false
     networks:
-      - caddy_default
+      - caddy-default
 
 networks:
-  caddy_default:
+  caddy-default:
     external: true
